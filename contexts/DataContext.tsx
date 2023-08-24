@@ -8,9 +8,7 @@ interface DataContextType {
 }
 
 const DataContext = createContext<DataContextType | any>(null);
-
 export const useDataContext = () => useContext(DataContext)
-
 export const DataContextProvider = ({ children }: { children: React.ReactNode }) => {
 
     const [characters, setCharacters] = useState<[]>([])

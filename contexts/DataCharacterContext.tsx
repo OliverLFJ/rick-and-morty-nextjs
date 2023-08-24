@@ -2,7 +2,6 @@
 import { createContext, useContext, useState, useEffect, useReducer, Reducer, ReactNode } from 'react'
 import FiltersReducer from '@/reducers/FilterReducer'
 
-
 interface State {
     name: string,
     status: string,
@@ -80,7 +79,6 @@ export const DataCharacterContextProvider = ({ children }: { children: React.Rea
         }
     }, [pages]);
 
-
     useEffect(() => {
         const index = pagesInComponent.indexOf(pageSelected)
         if (nextStatus === true) {
@@ -95,7 +93,6 @@ export const DataCharacterContextProvider = ({ children }: { children: React.Rea
             setTotalButtons([...pagesInComponent.slice(index, index + 4)])
         }
     }, [prevStatus, nextStatus, pagesInComponent, pages, pageSelected, buttonFind])
-
 
     return (
         <DataCharacterContext.Provider

@@ -9,7 +9,7 @@ export default function CharacterPage() {
 
     const [showContent, setShowContent] = useState(false);
     const simulateDelay = async () => {
-        await new Promise((resolve) => setTimeout(resolve, 100));
+        await new Promise((resolve) => setTimeout(resolve, 1500));
         setShowContent(true);
     };
     simulateDelay();
