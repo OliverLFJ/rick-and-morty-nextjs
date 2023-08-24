@@ -152,7 +152,7 @@
 .content {
     width: 100vw;
     height: auto;
-    padding: 20vh 10vh 10vh 10vh;
+    padding: 10vh 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,4 +179,79 @@
     justify-content: center;
     text-shadow: -.5px -.5px 0 #97ce4c, .5px -.5px 0 #97ce4c, -.5px .5px 0 #97ce4c, .5px .5px 0 #97ce4c;
     width: 100%;
+}
+
+.container_component {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4vh;
+}
+
+.container_component select {
+    background-color: #1a5b66;
+    border: .9px solid #97ce4c;
+    border-radius: 5px;
+    color: #97ce4c;
+    font-size: 1.2em;
+    outline: none;
+    padding: .7rem .9rem;
+}
+
+.container_component select:hover {
+    cursor: pointer;
+}
+
+.filters_container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0vh 4vh;
+}
+
+.filters_container .form_group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filters_container .form_group>input {
+    background-color: #1a5b66;
+    border: .9px solid #97ce4c;
+    border-radius: 5px;
+    color: #97ce4c;
+    font-size: 1.2em;
+    outline: none;
+    padding: .7rem .9rem;
+}
+
+.filters_container .form_group>button {
+    background-color: #97ce4c;
+    border: .9px solid #1a5b66;
+    border-radius: 5px;
+    color: #1a5b66;
+    font-size: 1.2em;
+    outline: none;
+    padding: .7rem .9rem;
+}
+
+.filters_container .form_group>button:hover {
+    color: #97ce4c;
+    background-color: #133136;
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.filters_container .form_container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 2vh;
+}
+
+.form_group label{
+    font-size: 1.2em;
+    color: #133136;
+    font-weight: 700;
 }

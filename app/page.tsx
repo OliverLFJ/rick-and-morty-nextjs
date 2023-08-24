@@ -5,6 +5,7 @@ import { DataContextProvider } from "@/contexts/DataContext"
 import RecentEpisodes from "@/components/RecentEpisodes"
 
 export default function Page() {
+
     return (
         <div className={styles.content}>
             <div className={styles.general_content}>

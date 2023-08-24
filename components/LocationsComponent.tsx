@@ -1,21 +1,21 @@
 'use client'
 
-import { useDataEpisodesContext } from "@/contexts/DataEpisodesContext"
 import styles from "./Component.module.css"
+import { useDataLocationContext } from "@/contexts/DataLocationContext"
 
-export default function EpisodesComponent() {
+export default function LocationsComponent() {
 
-    const { dataEpisodes, charactersFromChapters, setEpisodeSelected } = useDataEpisodesContext()
+    const { dataLocations, charactersFromLocations, setEpisodeSelected } = useDataLocationContext()
     return (
         <div className={styles.container_component}>
             <select onChange={(e) => setEpisodeSelected(e.target.value)}>
-                {dataEpisodes.map((item: any, index: number) => (
+                {dataLocations.map((item: any, index: number) => (
                     <option key={index} value={index + 1}>{item}</option>
                 ))}
             </select>
             <div className={styles.grid_container_recentchar}>
                 {
-                    charactersFromChapters.map((item: any) => (
+                    charactersFromLocations.map((item: any) => (
                         <div className={styles.card} key={item.id}>
                             <div className={styles.number_card}>
                                 <h4>{item.id}</h4>
