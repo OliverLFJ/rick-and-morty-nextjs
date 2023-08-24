@@ -6,6 +6,7 @@ import { useDataCharacterContext } from "@/contexts/DataCharacterContext"
 import ButtonsComponent from "../utils/ButtonsComponent"
 import DontFind from "../error/DontFind"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function CharactersComponent() {
 
@@ -23,7 +24,7 @@ export default function CharactersComponent() {
                                         <div className={styles.number_card}>
                                             <h4>{item.id}</h4>
                                         </div>
-                                        <img alt={item.name} src={item.image} />
+                                        <img alt={item.name} src={item.image} loading="lazy" />
                                         <div className={styles.character_info}>
                                             <section>
                                                 <h3 className={styles.character_name}>{item.name}</h3>

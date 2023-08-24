@@ -1,9 +1,11 @@
 'use client'
-import LocationsComponent from "@/components/layout/LocationsComponent"
 import styles from "./../Layout.module.css"
 import { DataLocationContextProvider } from "@/contexts/DataLocationContext"
-import { useState } from "react"
+import { useState, lazy, Suspense } from "react"
 import Loader from "@/components/utils/Loader"
+
+const CharactersComponentLazy = lazy(() => import('@/components/layout/LocationsComponent'));
+
 
 export default function LocationPage() {
 
@@ -20,7 +22,9 @@ export default function LocationPage() {
                 <div className={styles.general_content}>
                     <h2 className={styles.title}>Find By Locations</h2>
                     <DataLocationContextProvider>
-                        <LocationsComponent />
+                        <Suspense fallback={null}>
+                            <CharactersComponentLazy />
+                        </Suspense>
                     </DataLocationContextProvider>
                 </div>
             ) : (

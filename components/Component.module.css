@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .menu {
@@ -13,18 +13,22 @@
     gap: 2vh;
 }
 
+.menu_mobile_option {
+    display: none;
+}
+
 .menu>li {
     list-style: none;
 }
 
-.menu .option_menu {
+.option_menu {
     color: #1a5b66;
     text-decoration: none;
     font-size: 1.5em;
     font-weight: 700;
 }
 
-.menu .option_menu:hover {
+.option_menu:hover {
     color: #133136;
 }
 
@@ -32,10 +36,14 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
-    width: 100%;
+    width: 85vw;
     height: min-content;
     gap: 2vh;
     padding: 0vh 3vh;
+}
+
+.menu_movil {
+    display: inline;
 }
 
 .card {
@@ -52,6 +60,7 @@
 
 .card>img {
     width: 100%;
+    height: 300px;
     border-radius: 1.4vh;
 }
 
@@ -96,6 +105,7 @@
     justify-content: center;
     align-items: center;
     gap: 2vh;
+    text-align: center;
 }
 
 .character_name {
@@ -130,6 +140,7 @@
     align-items: center;
     height: 50%;
     border-radius: 1.4vh 1.4vh 1.4vh 1.4vh;
+
 }
 
 .card_episodes>section>h3 {
@@ -204,7 +215,7 @@
 }
 
 .filters_container {
-    width: 90vw;
+    width: 85vw;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -339,9 +350,296 @@
     color: #1a5b66;
 }
 
+.icons_menu {
+    display: none;
+}
+
 
 @keyframes s4 {
     100% {
         transform: rotate(1turn)
+    }
+}
+
+@media (max-width: 1680px) {
+    .grid_container_recentchar {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .character_info>section {
+        font-size: 0.9em;
+    }
+}
+
+/* Media query para pantallas medianas */
+@media (max-width: 1280px) {
+    .grid_container_recentchar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 75vw;
+    }
+
+    .filters_container {
+        flex-direction: column;
+        gap: 1vh;
+        width: 75vw;
+    }
+
+    .character_info>section {
+        font-size: 0.8em;
+    }
+}
+
+/* Media query para tabletas */
+@media (max-width: 1024px) {
+    .icons_menu {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .grid_container_recentchar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 75vw;
+    }
+
+    .character_info>section {
+        font-size: 0.7em;
+    }
+
+    .card_episodes>section>h3 {
+        font-size: 0.7em;
+    }
+
+    .card_episodes {
+        height: 17vh;
+    }
+
+    .card_episode_info>h3 {
+        font-size: 0.8em;
+    }
+
+    .open_menu {
+        color: #1a5b66;
+        position: absolute;
+        font-size: 2em;
+        opacity: 1;
+        transition: all 0.4s ease-in;
+    }
+
+    .open_menu_hidden {
+        color: #1a5b66;
+        position: absolute;
+        font-size: 2em;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .close_menu {
+        color: #1a5b66;
+        position: absolute;
+        font-size: 2em;
+        opacity: 1;
+        transition: all 0.4s ease-in;
+    }
+
+    .close_menu_hidden {
+        color: #1a5b66;
+        position: absolute;
+        font-size: 2em;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .header .image_logo {
+        width: 40%;
+        height: 20%;
+    }
+
+    .menu_mobile_option {
+        display: inline;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu_movil {
+        position: absolute;
+        display: inline flex;
+        width: 100vw;
+        height: 40vh;
+        background-color: #97ce4c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        margin-top: -1vh;
+        transition: all 1s ease-in-out;
+    }
+
+    .menu_movil_show {
+        position: absolute;
+        display: inline flex;
+        width: 100vw;
+        height: 40vh;
+        background-color: #97ce4c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        margin-top: -40vh;
+        transition: all 1s ease;
+    }
+
+    .option_menu {
+        font-size: 1.3em;
+    }
+
+
+    .card_episodes>section>h3 {
+        font-size: 0.9em;
+    }
+
+    .container_component select {
+        font-size: 1em;
+        padding: .4rem .6rem;
+    }
+
+    .form_group label {
+        font-size: 0.8em;
+    }
+
+    .filters_container .form_group>input {
+        font-size: 1em;
+        padding: .4rem .6rem;
+    }
+
+    .filters_container .form_group>button {
+        font-size: 1em;
+        padding: .4rem .6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid_container_recentchar {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 75vw;
+    }
+
+    .character_info>section {
+        font-size: 0.9em;
+    }
+
+    .card_episodes>section>h3 {
+        font-size: 0.9em;
+    }
+
+    .container_component select {
+        font-size: 0.7em;
+        padding: .4rem .6rem;
+    }
+
+    .form_group label {
+        font-size: 0.8em;
+    }
+
+    .filters_container .form_group>input {
+        font-size: 0.7em;
+        padding: .4rem .6rem;
+    }
+
+    .filters_container .form_group>button {
+        font-size: 0.7em;
+        padding: .4rem .6rem;
+    }
+}
+
+@media (max-width: 670px) {
+
+    .grid_container_recentchar {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 75vw;
+    }
+
+    .character_info>section {
+        font-size: 0.9em;
+    }
+
+    .card_episodes>section>h3 {
+        font-size: 0.9em;
+    }
+
+    .container_component select {
+        font-size: 0.7em;
+        padding: .4rem .6rem;
+    }
+
+    .form_group label {
+        font-size: 0.8em;
+    }
+
+    .form_container:last-child {
+        width: 60vw;
+        flex-wrap: wrap;
+    }
+
+    .filters_container .form_group>input {
+        font-size: 0.7em;
+        padding: .4rem .6rem;
+    }
+
+    .filters_container .form_group>button {
+        font-size: 0.7em;
+        padding: .4rem .6rem;
+    }
+
+}
+
+@media (max-width: 468px) {
+    .character_info>section {
+        font-size: 0.7em;
+    }
+
+    .card_episodes>section>h3 {
+        font-size: 0.7em;
+    }
+
+    .filters_container .form_group>input {
+        font-size: 0.7em;
+        padding: .4rem .6rem;
+        width: 12vh;
+    }
+
+    .filters_container .form_group>button {
+        font-size: 0.7em;
+        padding: .4rem .6rem;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .content .general_content {
+        background-color: deepskyblue;
+    }
+
+    .content {
+        padding: 10vh 5vh 10vh 5vh;
+    }
+
+    .form_container:first-child {
+        flex-direction: column-reverse;
     }
 }

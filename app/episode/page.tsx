@@ -1,9 +1,11 @@
 'use client'
-import EpisodesComponent from "@/components/layout/EpisodesComponent"
 import styles from "./../Layout.module.css"
 import { DataEpisodesContextProvider } from "@/contexts/DataEpisodesContext"
-import { useState } from 'react'
+import { useState, Suspense, lazy } from 'react'
 import Loader from "@/components/utils/Loader"
+
+const CharactersComponentLazy = lazy(() => import('@/components/layout/EpisodesComponent'));
+
 
 export default function EpisodePage() {
 
@@ -20,7 +22,9 @@ export default function EpisodePage() {
                 <div className={styles.general_content}>
                     <h2 className={styles.title}>Find By Episodes</h2>
                     <DataEpisodesContextProvider>
-                        <EpisodesComponent />
+                        <Suspense fallback={null}>
+                            <CharactersComponentLazy />
+                        </Suspense>
                     </DataEpisodesContextProvider>
                 </div>
             ) : (

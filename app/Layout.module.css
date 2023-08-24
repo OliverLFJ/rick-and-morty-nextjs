@@ -14,10 +14,12 @@
     display: flex;
     flex-direction: column;
     gap: 4vh;
-    padding: 1vh 0vh;
+    padding: 5vh 0vh;
     justify-content: flex-start;
     align-items: center;
     overflow: hidden;
+    border-radius: 1.4vh;
+    box-shadow: 10px 10px 40px 1px;
 }
 
 .content>.general_content .title {
@@ -116,4 +118,157 @@
     color: #FFFFFF;
     text-align: center;
     flex-wrap: wrap;
+}
+
+@media (max-width: 1680px) {
+
+    .content .general_content {
+        background-color: red;
+    }
+
+    .content {
+        padding: 15vh 10vh 10vh 10vh;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .content .general_content {
+        background-color: orange;
+    }
+
+    .content {
+        padding: 10vh 10vh 10vh 10vh;
+    }
+
+    .card_character {
+        width: 50%;
+    }
+
+    .image_character {
+        width: 20vw;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .content .general_content {
+        background-color: green;
+    }
+
+    .content>.general_content .title {
+        font-size: 1.8em;
+    }
+
+    .card_character {
+        width: 70%;
+    }
+
+    .image_character {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .content .general_content {
+        background-color: pink;
+    }
+
+    .content>.general_content .title {
+        font-size: 1.8em;
+    }
+
+    .content {
+        padding: 10vh 5vh 10vh 5vh;
+    }
+}
+
+@media (max-width: 670px) {
+
+    .content .general_content {
+        background-color: blue;
+    }
+
+    .content {
+        padding: 10vh 5vh 10vh 5vh;
+    }
+
+    .header_card .name_character {
+        font-size: 1.4em;
+    }
+
+    .header_card .id_character {
+        font-size: 1em;
+    }
+
+    .card_character {
+        width: 80%;
+    }
+
+    .image_character {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 468px) {
+    .content .general_content {
+        background-color: chocolate;
+    }
+
+    .content {
+        padding: 10vh 5vh 10vh 5vh;
+    }
+
+    .header_card .name_character {
+        font-size: 1.1em;
+    }
+
+    .header_card .id_character {
+        font-size: 0.7em;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .card_character {
+        width: 80%;
+    }
+
+    .image_character {
+        width: 40vw;
+    }
+
+    .info_character>section>div>label {
+        font-size: 1em;
+    }
+
+    .info_character>section>div>p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 360px) {
+    .card_character {
+        width: 90%;
+    }
+
+    .image_character {
+        width: 40vw;
+    }
+
+    .content .general_content {
+        background-color: deepskyblue;
+    }
+
+    .content {
+        padding: 10vh 5vh 10vh 5vh;
+    }
+
+    .info_character>section>div>label {
+        font-size: 0.8em;
+    }
+
+    .info_character>section>div>p {
+        font-size: 0.6em;
+    }
 }

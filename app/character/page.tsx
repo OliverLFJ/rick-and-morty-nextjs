@@ -1,9 +1,10 @@
 'use client'
 import styles from "./../Layout.module.css"
-import CharactersComponent from "@/components/layout/CharactersComponent"
 import Loader from "@/components/utils/Loader"
 import { DataCharacterContextProvider } from "@/contexts/DataCharacterContext"
-import { useState } from "react"
+import { lazy, useState, Suspense } from "react"
+
+const CharactersComponentLazy = lazy(() => import('@/components/layout/CharactersComponent'));
 
 export default function CharacterPage() {
 
@@ -15,18 +16,21 @@ export default function CharacterPage() {
     simulateDelay();
 
     return (
-        <div className={styles.content}>
-            {showContent ? (
-                <div className={styles.general_content}>
-                    <h2 className={styles.title}>Characters</h2>
-                    <DataCharacterContextProvider>
-                        <CharactersComponent />
-                    </DataCharacterContextProvider>
-                </div>
-            ) : (
-                <Loader />
-            )}
-
-        </div>
+        <Suspense fallback={<Loader />}>
+            <div className={styles.content}>
+                {showContent ? (
+                    <div className={styles.general_content}>
+                        <h2 className={styles.title}>Characters</h2>
+                        <DataCharacterContextProvider>
+                            <Suspense fallback={null}>
+                                <CharactersComponentLazy />
+                            </Suspense>
+                        </DataCharacterContextProvider>
+                    </div>
+                ) : (
+                    <Loader />
+                )}
+            </div>
+        </Suspense >
     )
 }

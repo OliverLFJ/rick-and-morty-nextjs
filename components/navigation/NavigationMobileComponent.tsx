@@ -1,7 +1,7 @@
 import Link from "next/link"
 import styles from "./../Component.module.css"
 
-export default function NavigationComponent() {
+export default function NavigationMobileComponent() {
     const links = [
         { label: 'Home', route: '/' },
         { label: 'Character', route: '/character' },
@@ -10,7 +10,7 @@ export default function NavigationComponent() {
     ]
     return (
         <>
-            <ul className={styles.menu}>
+            <ul className={styles.menu_mobile_option}>
                 {links.map((item: any) => (
                     <li key={item.label}>
                         <Link href={item.route} className={styles.option_menu}>{item.label}</Link>
