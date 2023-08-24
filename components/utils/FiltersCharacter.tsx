@@ -1,7 +1,7 @@
-import styles from "./Component.module.css"
-import { speciesData, genderData, statusData } from './../utils/speciedata'
+import styles from "./../Component.module.css"
+import { speciesData, genderData, statusData } from '../../utils/speciedata'
 import { useDataCharacterContext } from "@/contexts/DataCharacterContext"
-import { SET_NAME, SET_STATUS, SET_SPECIE, SET_GENDER } from './../reducers/ActionType';
+import { SET_NAME, SET_STATUS, SET_SPECIE, SET_GENDER } from '../../reducers/ActionType';
 
 export default function FiltersCharacter() {
 

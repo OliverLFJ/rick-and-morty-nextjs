@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styles from "./Component.module.css"
+import styles from "./../Component.module.css"
 
 export default function NavigationComponent() {
     const links = [

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./Component.module.css"
+import styles from "./../Component.module.css"
 import NavigationComponent from "./NavigationComponent";
 
 export default function NavbarComponent() {

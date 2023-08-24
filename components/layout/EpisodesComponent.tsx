@@ -1,19 +1,21 @@
 'use client'
 
-import styles from "./Component.module.css"
-import FiltersCharacter from "./FiltersCharacter"
-import { useDataCharacterContext } from "@/contexts/DataCharacterContext"
-import ButtonsComponent from "./ButtonsComponent"
+import { useDataEpisodesContext } from "@/contexts/DataEpisodesContext"
+import styles from "./../Component.module.css"
 
-export default function CharactersComponent() {
+export default function EpisodesComponent() {
 
-    const { character } = useDataCharacterContext()
+    const { dataEpisodes, charactersFromChapters, setEpisodeSelected } = useDataEpisodesContext()
     return (
         <div className={styles.container_component}>
-            <FiltersCharacter />
+            <select onChange={(e) => setEpisodeSelected(e.target.value)}>
+                {dataEpisodes.map((item: any, index: number) => (
+                    <option key={index} value={index + 1}>{item}</option>
+                ))}
+            </select>
             <div className={styles.grid_container_recentchar}>
                 {
-                    character.map((item: any) => (
+                    charactersFromChapters.map((item: any) => (
                         <div className={styles.card} key={item.id}>
                             <div className={styles.number_card}>
                                 <h4>{item.id}</h4>
@@ -33,7 +35,6 @@ export default function CharactersComponent() {
                     ))
                 }
             </div>
-            <ButtonsComponent />
         </div>
 
     )

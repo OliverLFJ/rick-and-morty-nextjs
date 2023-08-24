@@ -1,5 +1,5 @@
-import { useDataContext } from "../contexts/DataContext"
-import styles from "./Component.module.css"
+import { useDataContext } from "../../contexts/DataContext"
+import styles from "./../Component.module.css"
 
 export default function RecentEpisodes() {
 
