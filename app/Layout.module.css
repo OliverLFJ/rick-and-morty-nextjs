@@ -1,0 +1,31 @@
+.content {
+    width: 100vw;
+    height: auto;
+    padding: 20vh 10vh 10vh 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .general_content {
+    width: 100vw;
+    height: min-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    padding: 1vh 0vh;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content>.general_content .title {
+    align-items: center;
+    color: #40b5cb;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    text-shadow: -.5px -.5px 0 #97ce4c, .5px -.5px 0 #97ce4c, -.5px .5px 0 #97ce4c, .5px .5px 0 #97ce4c;
+    width: 100%;
+}
