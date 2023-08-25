@@ -7,6 +7,7 @@ import ButtonsComponent from "../utils/ButtonsComponent"
 import DontFind from "../error/DontFind"
 import Link from "next/link"
 import Image from "next/image"
+import { relative } from "path"
 
 export default function CharactersComponent() {
 
@@ -24,7 +25,7 @@ export default function CharactersComponent() {
                                         <div className={styles.number_card}>
                                             <h4>{item.id}</h4>
                                         </div>
-                                        <img alt={item.name} src={item.image} loading="lazy" />
+                                        <Image alt={item.name} src={item.image} quality={50} loading="lazy" width="0" height="0" sizes="100vw" />
                                         <div className={styles.character_info}>
                                             <section>
                                                 <h3 className={styles.character_name}>{item.name}</h3>

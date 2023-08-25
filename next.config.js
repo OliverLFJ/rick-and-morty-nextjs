@@ -1,14 +1,12 @@
 /** @type {import('next').NextConfig} */
-const withOptimizedImages = require('next-optimized-images');
+const optimizedImages = require('next-optimized-images');
+const withPlugins = require('next-compose-plugins');
 
 const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['rickandmortyapi.com']
   },
-  ...withOptimizedImages({
-    handleImages: ['jpeg', 'png', 'svg'],
-  }),
 }
 
 module.exports = nextConfig
