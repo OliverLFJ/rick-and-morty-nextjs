@@ -20,8 +20,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
-    "responsive-loader": "^3.1.2",
-    "sharp": "^0.32.5",
     "typescript": "5.1.6"
   }
 }
