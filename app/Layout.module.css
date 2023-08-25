@@ -127,7 +127,7 @@
     }
 
     .content {
-        padding: 15vh 10vh 10vh 10vh;
+        padding: 20vh 10vh 10vh 10vh;
     }
 }
 
@@ -138,7 +138,7 @@
     }
 
     .content {
-        padding: 10vh 10vh 10vh 10vh;
+        padding: 20vh 10vh 10vh 10vh;
     }
 
     .card_character {
@@ -151,9 +151,12 @@
 }
 
 @media (max-width: 1024px) {
+    .content {
+        padding: 15vh 10vh 10vh 10vh;
+    }
 
     .content .general_content {
-        background-color: #ffffff;
+        background-color: #FFFFFF;
     }
 
     .content>.general_content .title {
@@ -172,7 +175,7 @@
 @media (max-width: 768px) {
 
     .content .general_content {
-        background-color: #ffffff;
+        background-color: #FFFFFF;
     }
 
     .content>.general_content .title {
@@ -187,7 +190,7 @@
 @media (max-width: 670px) {
 
     .content .general_content {
-        background-color: #ffffff;
+        background-color: #FFFFFF;
     }
 
     .content {
@@ -213,7 +216,7 @@
 
 @media (max-width: 468px) {
     .content .general_content {
-        background-color: #ffffff;
+        background-color: #FFFFFF;
     }
 
     .content {

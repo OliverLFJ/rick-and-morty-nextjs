@@ -19,6 +19,7 @@ body {
 
 .slime {
   width: 99vw;
+  height: 18vh;
   position: absolute;
   margin-top: -3vh;
 }
@@ -38,32 +39,41 @@ body {
 
   .slime {
     width: 100vw;
+    height: 10vh;
     position: absolute;
     bottom: 0;
-    margin-bottom: -6%;
+    margin-bottom: -8%;
   }
 }
 
 @media (max-width: 768px) {
   .slime {
     width: 100%;
+    height: 10vh;
+    margin-bottom: -10%;
   }
 }
 
 @media (max-width: 670px) {
   .slime {
     width: 100%;
+    height: 7vh;
+    margin-bottom: -9%;
   }
 }
 
 @media (max-width: 468px) {
   .slime {
     width: 100%;
+    height: 6vh;
+    margin-bottom: -10%;
   }
 }
 
 @media (max-width: 360px) {
   .slime {
     width: 100%;
+    height: 6vh;
+    margin-bottom: -13%;
   }
 }
