@@ -305,6 +305,10 @@
     animation: s4 1s infinite linear;
 }
 
+.active_option {
+    color: #133136;
+}
+
 .custom_loader::after {
     border-color: #0000 #0000 #E4E4ED #E4E4ED;
     animation-direction: reverse;

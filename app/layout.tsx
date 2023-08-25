@@ -1,17 +1,17 @@
-import NavbarComponent from "../components/navigation/NavbarComponent"
+import { MenuContextProvider } from "@/contexts/MenuContext"
 import "./../styles/globals.css"
+import RootLayoutComponent from "./root/RootLayoutComponent"
 export const metadata = {
   title: 'Rick & Morty App',
   description: 'Rick & Morty App',
 }
 
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
+
+
   return (
-    <html lang="en">
-      <body>
-        <NavbarComponent />
-        {children}
-      </body>
-    </html>
+    <MenuContextProvider>
+      <RootLayoutComponent children={children} />
+    </MenuContextProvider>
   )
 }

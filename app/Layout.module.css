@@ -10,7 +10,7 @@
 .content .general_content {
     width: 100vw;
     height: min-content;
-    background-color: white;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 4vh;
@@ -123,7 +123,7 @@
 @media (max-width: 1680px) {
 
     .content .general_content {
-        background-color: red;
+        background-color: #ffffff;
     }
 
     .content {
@@ -134,7 +134,7 @@
 @media (max-width: 1280px) {
 
     .content .general_content {
-        background-color: orange;
+        background-color: #ffffff;
     }
 
     .content {
@@ -153,7 +153,7 @@
 @media (max-width: 1024px) {
 
     .content .general_content {
-        background-color: green;
+        background-color: #ffffff;
     }
 
     .content>.general_content .title {
@@ -172,7 +172,7 @@
 @media (max-width: 768px) {
 
     .content .general_content {
-        background-color: pink;
+        background-color: #ffffff;
     }
 
     .content>.general_content .title {
@@ -187,7 +187,7 @@
 @media (max-width: 670px) {
 
     .content .general_content {
-        background-color: blue;
+        background-color: #ffffff;
     }
 
     .content {
@@ -213,7 +213,7 @@
 
 @media (max-width: 468px) {
     .content .general_content {
-        background-color: chocolate;
+        background-color: #ffffff;
     }
 
     .content {
@@ -257,7 +257,7 @@
     }
 
     .content .general_content {
-        background-color: deepskyblue;
+        background-color: #ffffff;
     }
 
     .content {
