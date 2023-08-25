@@ -3,8 +3,9 @@ import RecentCharacters from "@/components/layout/RecentCharacters"
 import styles from "./Layout.module.css"
 import { DataContextProvider } from "@/contexts/DataContext"
 import RecentEpisodes from "@/components/layout/RecentEpisodes"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Loader from "@/components/utils/Loader"
+import { useMenuContext } from "@/contexts/MenuContext"
 
 export default function Page() {
 
@@ -14,6 +15,18 @@ export default function Page() {
         setShowContent(true);
     };
     simulateDelay();
+
+    const { setMenuState } = useMenuContext()
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setMenuState(false);
+        };
+        document.addEventListener('scroll', handleScroll);
+        return () => {
+            document.removeEventListener('scroll', handleScroll);
+        };
+    }, [setMenuState]);
 
     return (
         <div className={styles.content}>

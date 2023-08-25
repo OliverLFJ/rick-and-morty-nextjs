@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link"
 import styles from "./../Component.module.css"
 import { usePathname } from 'next/navigation'

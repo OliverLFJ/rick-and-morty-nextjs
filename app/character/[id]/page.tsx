@@ -1,3 +1,4 @@
+import Image from "next/image"
 import styles from "./../../Layout.module.css"
 import { Suspense } from 'react'
 
@@ -23,7 +24,7 @@ export default async function IndividualCharacter({ params }: { params: any }) {
                             <h2 className={styles.id_character}>{data.id}</h2>
                         </header>
                         <div className={styles.image_character}>
-                            <img src={data.image} />
+                            <Image alt={data.name} src={data.image} quality={50} loading="lazy" width="0" height="0" sizes="100vw" />
                         </div>
                         <div className={styles.info_character}>
                             <section>
