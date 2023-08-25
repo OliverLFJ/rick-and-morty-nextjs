@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { useDataContext } from "../../contexts/DataContext"
 import styles from "./../Component.module.css"
+import Image from "next/image"
 
 export default function RecentCharacters() {
 
@@ -15,7 +16,7 @@ export default function RecentCharacters() {
                             <div className={styles.number_card}>
                                 <h4>{item.id}</h4>
                             </div>
-                            <img alt={item.name} src={item.image} />
+                            <Image alt={item.name} src={item.image} quality={50} loading="lazy" width="0" height="0" sizes="100vw" />
                             <div className={styles.character_info}>
                                 <section>
                                     <h3 className={styles.character_name}>{item.name}</h3>
